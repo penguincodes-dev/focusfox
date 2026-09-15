@@ -1,0 +1,206 @@
+#heroSection {
+    font-family: "Share Tech Mono", monospace;
+
+    width: 100vw;
+    height: 40vh;
+    min-height: 200px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+
+/* =========================
+   TITLE
+========================= */
+
+h1 {
+    margin: 0;
+
+    color: white;
+
+    font-size: 40px;
+    font-weight: normal;
+}
+
+
+/* =========================
+   SEARCH BAR
+========================= */
+
+.searchBar {
+    width: 600px;
+    height: 80px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* =========================
+   ENGINE SELECTOR
+========================= */
+
+.engine-options {
+    height: 29px;
+}
+
+
+/* =========================
+   ENGINE BUTTON
+========================= */
+
+.engine-options button {
+    height: 29px;
+    width: 40px;
+
+    padding: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    background-color: rgb(35, 35, 35);
+
+    border: 1px solid rgb(28, 28, 28);
+    border-right: none;
+
+    border-top-left-radius: 13px;
+    border-bottom-left-radius: 13px;
+
+    cursor: pointer;
+}
+
+.engine-options button:disabled {
+    cursor: default;
+}
+
+
+/* =========================
+   ICON WRAPPER
+========================= */
+
+.icon-wrapper {
+    position: relative;
+
+    width: 25px;
+    height: 25px;
+
+    overflow: visible;
+}
+
+
+/* =========================
+   ICONS
+========================= */
+
+.engine-icon {
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 25px;
+    height: 25px;
+
+    border-radius: 12.5px;
+
+    object-fit: cover;
+
+    pointer-events: none;
+}
+
+
+/* =========================
+   CURRENT ICON
+========================= */
+
+.current {
+    transform: translateX(0);
+}
+
+
+/* =========================
+   NEXT ICON
+========================= */
+
+.next {
+    transform: translateX(-40px);
+}
+
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+.slide-out {
+    animation: slideOut 300ms ease-in forwards;
+}
+
+.slide-in {
+    animation: slideIn 300ms ease-out forwards;
+}
+
+
+/* Old icon → right */
+
+@keyframes slideOut {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(40px);
+    }
+}
+
+
+/* New icon → left to right */
+
+@keyframes slideIn {
+    from {
+        transform: translateX(-40px);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+
+/* =========================
+   SEARCH INPUT
+========================= */
+
+#input {
+    height: 27px;
+    width: 400px;
+
+    padding: 0 10px;
+
+    color: white;
+
+    background-color: rgb(35, 35, 35);
+
+    border: 1px solid rgb(28, 28, 28);
+    border-left: none;
+
+    border-top-right-radius: 13px;
+    border-bottom-right-radius: 13px;
+
+    outline: none;
+
+    font-family: "Share Tech Mono", monospace;
+}
+
+
+/* Optional focus effect */
+/* 
+#input:focus {
+    background-color: rgb(38, 38, 38);
+} */
