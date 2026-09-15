@@ -1,15 +1,23 @@
 {
-  "manifest_version": 3,
-  "name": "FocusFox",
-  "version": "0.1.0",
-  "description": "A lightweight browser start page with customizable shortcuts.",
-  "browser_specific_settings": {
-    "gecko": {
-      "id": "focusfox@example.com"
+    "manifest_version": 3,
+    "name": "FocusFox",
+    "version": "0.1.0",
+    "description": "A lightweight browser start page with customizable shortcuts.",
+
+    "browser_specific_settings": {
+        "gecko": {
+            "id": "focusfox@example.com",
+            "data_collection_permissions": {
+                "required": ["none"]
+            }
+        }
+    },
+
+    "chrome_url_overrides": {
+        "newtab": "index.html"
+    },
+
+    "chrome_settings_overrides": {
+        "homepage": "index.html"
     }
-  },
-  "chrome_url_overrides": {
-    "newtab": "index.html"
-  },
-  "permissions": []
 }
